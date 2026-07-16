@@ -1,0 +1,181 @@
+window.SITE_CONTENT = {
+  translations: {
+    zh: { skip:'跳至主要内容',navMission:'使命',navRoad:'征途',navTeam:'中国队',navEvent:'赛事',navSport:'认识板铃球',navStory:'中国故事',navPartner:'合作',navContact:'联系',heroEvent:'2026 IBSA盲人板铃球亚洲锦标赛 · 8月12—17日 · 韩国首尔',photoPlaceholder:'真实比赛照片 / PHOTO PLACEHOLDER',heroLine:'听见比赛。<br>感受力量。',meetTeam:'认识中国运动员',partnerUs:'成为合作伙伴',discover:'探索',missionLabel:'我们的使命',missionTitle:'SPORT<br>WITHOUT LIMITS',missionCopy:'盲人板铃球是一项专为视力残疾人设计的室内对抗性球类运动。运动员依靠球体内置响铃判断位置、方向和速度，在快速攻防中展现专注、判断与竞技力量。',journeyLabel:'通往亚洲赛场',roadTitle:'ROAD TO KOREA',roadIntro:'2025年，中国运动员首次登上板铃球国际赛场。2026年，队伍将向亚洲最高级别官方洲际锦标赛迈进。',teamLabel:'中国运动员档案',teamTitle:'TEAM CHINA',teamIntro:'以下为历届赛事中有明确记录的中国运动员与成绩，不代表2026年亚洲锦标赛正式名单；正式名单待公布。',staffLabel:'工作人员团队',staffTitle:'BEHIND THE TEAM',staffIntro:'专业保障团队与中国运动员并肩前行。',staffHint:'横向滑动查看更多 →',eventLabel:'赛事中心',eventTitle:'EVENT CENTER',eventIntro:'2026年赛事日期与整体日程已经确认；具体对阵、赛果和直播信息将在官方发布后更新。',tabSchedule:'赛程',tabResults:'赛果',tabLive:'直播',tabNews:'资讯',sportLabel:'认识项目',sportTitle:'WHAT IS<br>SHOWDOWN?',sportIntro:'运动员在特制球桌两端，依靠声音判断带铃球的位置，通过击球、拦截、防守和进攻完成比赛。它快速、直接，也充满战术。',storyLabel:'中国板铃球发展',storyTitle:'A STORY<br>IN MOTION',storyIntro:'从学校教学试点到全国交流、省级赛事和国际赛场，中国盲人板铃球正形成清晰的发展路径。',achLabel:'真实里程碑',achTitle:'BUILT TO COMPETE',dataNote:'数据来自现有项目介绍与历届参赛材料；2026年代表队名单及比赛成绩仍待官方确认。',partnerLabel:'合作伙伴计划',partnerTitle:'POWER THE<br>JOURNEY',partnerCopy:'与中国板铃球队并肩，把国际竞技、运动员成长与包容性体育带给更广泛的受众。',downloadProposal:'下载合作方案',talkTeam:'联系合作团队 →',partnerLogo:'合作伙伴品牌展示区',mediaLabel:'媒体中心',mediaTitle:'LATEST STORIES',mediaIntro:'从中国队首次国际亮相到2026亚洲锦标赛征程，真实故事将在这里持续发布。',contactLabel:'联系我们',contactTitle:"LET'S MOVE<br>FORWARD.",footerCopy:'听见比赛，感受力量。',backTop:'返回顶部 ↑',footerNote:'2026年参赛名单、对阵及赛果以官方发布为准',athleteStory:'运动员参赛记录',modalCopy:'以下为现有材料中可核实的历届参赛记录；2026年代表队名单待官方公布。'},
+    en: { skip:'Skip to main content',navMission:'Mission',navRoad:'Journey',navTeam:'Team China',navEvent:'Event',navSport:'The Sport',navStory:'China Story',navPartner:'Partnership',navContact:'Contact',heroEvent:'2026 IBSA Asian Showdown Championships · 12–17 August · Seoul, Korea',photoPlaceholder:'AUTHENTIC EVENT PHOTO PLACEHOLDER',heroLine:'HEAR THE GAME.<br>FEEL THE POWER.',meetTeam:'Meet The Athletes',partnerUs:'Partner With Us',discover:'Discover',missionLabel:'Our Mission',missionTitle:'SPORT<br>WITHOUT LIMITS',missionCopy:'Showdown is an indoor competitive ball sport designed for people with visual impairments. Athletes locate the audible ball by its sound, reading position, direction and speed through every fast exchange.',journeyLabel:'The Asian Championship Journey',roadTitle:'ROAD TO KOREA',roadIntro:'In 2025, Chinese athletes entered the international Showdown arena for the first time. In 2026, the journey continues toward Asia’s highest-level official continental championship.',teamLabel:'Chinese Athlete Archive',teamTitle:'TEAM CHINA',teamIntro:'These athletes and results are drawn from verified historical records. This is not the official roster for the 2026 Asian Championships, which is still to be announced.',staffLabel:'Team Staff',staffTitle:'BEHIND THE TEAM',staffIntro:'A professional support team stands alongside China’s athletes throughout the journey.',staffHint:'Swipe to explore →',eventLabel:'Competition Hub',eventTitle:'EVENT CENTER',eventIntro:'The event dates and overall program are confirmed. Draws, results and live coverage will be added after official release.',tabSchedule:'Schedule',tabResults:'Results',tabLive:'Live',tabNews:'News',sportLabel:'Know The Sport',sportTitle:'WHAT IS<br>SHOWDOWN?',sportIntro:'Athletes face each other across a specialized table, locating the audible ball by sound and combining striking, interception, defense and attack in a fast tactical contest.',storyLabel:'Showdown In China',storyTitle:'A STORY<br>IN MOTION',storyIntro:'From a school-based pilot to national exchanges, provincial games and international competition, Showdown in China has built a clear development pathway.',achLabel:'Verified Milestones',achTitle:'BUILT TO COMPETE',dataNote:'Figures are drawn from the current project and competition records. The 2026 roster and results await official confirmation.',partnerLabel:'Partnership Program',partnerTitle:'POWER THE<br>JOURNEY',partnerCopy:'Stand with Team China and help bring international competition, athlete development and inclusive sport to a wider audience.',downloadProposal:'Download Proposal',talkTeam:'Talk To Our Team →',partnerLogo:'Partner brand showcase',mediaLabel:'Media Center',mediaTitle:'LATEST STORIES',mediaIntro:'From China’s international debut to the road to the 2026 Asian Championships, verified stories will be published here.',contactLabel:'Get In Touch',contactTitle:"LET'S MOVE<br>FORWARD.",footerCopy:'Hear the game. Feel the power.',backTop:'Back to top ↑',footerNote:'The official 2026 roster, draws and results remain subject to announcement',athleteStory:'Competition Record',modalCopy:'The following results are verified from available historical records. The official 2026 roster is yet to be announced.'}
+  },
+  mission: [
+    {n:'01',icon:'sound',zh:'声音定位',en:'Sound Location',lzh:'声音成为运动员的“视觉”。',len:'Sound becomes the athlete’s “vision”.',dzh:'运动员通过听觉捕捉球的速度、方向与轨迹，在每一次碰撞与反弹中判断位置，并完成精准防守与进攻。',den:'Athletes use hearing to track the ball’s speed, direction and path, judging its position through every impact and rebound to defend and attack with precision.'},
+    {n:'02',icon:'reaction',zh:'极速反应',en:'Fast Reactions',lzh:'每一秒都决定胜负。',len:'Every second can decide the result.',dzh:'运动员需要在极短时间内完成声音判断、方向分析和动作反应，依靠高度集中力、身体协调能力和快速决策能力展开攻防。',den:'Athletes must interpret sound, analyze direction and react in an instant, combining intense concentration, coordination and rapid decision-making in every exchange.'},
+    {n:'03',icon:'fair',zh:'公平竞技',en:'Fair Competition',lzh:'打造真正平等的竞技舞台。',len:'A truly equal field of play.',dzh:'比赛中所有运动员佩戴统一眼罩，消除视觉差异，让技术、策略和意志力决定比赛结果，而不是视觉能力。',den:'All athletes wear standardized eyeshades to remove differences in vision, allowing skill, strategy and determination, rather than visual ability, to decide the result.'},
+    {n:'04',icon:'spirit',zh:'体育精神',en:'Sporting Spirit',lzh:'连接勇气、尊重与坚持。',len:'Connecting courage, respect and perseverance.',dzh:'运动员突破身体限制，用热爱和努力证明：体育没有边界，每个人都有追逐梦想的权利。',den:'Athletes push beyond physical limitations and show through passion and effort that sport has no boundaries and everyone has the right to pursue a dream.'}
+  ],
+  missionVideo: {
+    url: 'assets/videos/showdown-introduction.mp4',
+    poster: 'assets/images/showdown-video-poster.jpg',
+    labelZh: '盲人板铃球宣传视频',
+    labelEn: 'Showdown Introduction Video'
+  },
+  gallery: [
+    {id:'korea2025',titleZh:'2025年韩国盲人板铃球邀请赛精彩瞬间',titleEn:'2025 Korea Showdown Invitational',images:[
+      {src:'assets/images/korea-2025/korea-2025-01.jpg',altZh:'2025年韩国盲人板铃球邀请赛精彩瞬间',altEn:'2025 Korea Showdown Invitational'},
+      {src:'assets/images/korea-2025/korea-2025-02.jpg',altZh:'2025年韩国盲人板铃球邀请赛精彩瞬间',altEn:'2025 Korea Showdown Invitational'},
+      {src:'assets/images/korea-2025/korea-2025-03.jpg',altZh:'2025年韩国盲人板铃球邀请赛精彩瞬间',altEn:'2025 Korea Showdown Invitational'},
+      {src:'assets/images/korea-2025/korea-2025-04.jpg',altZh:'2025年韩国盲人板铃球邀请赛精彩瞬间',altEn:'2025 Korea Showdown Invitational'},
+      {src:'assets/images/korea-2025/korea-2025-05.jpg',altZh:'2025年韩国盲人板铃球邀请赛精彩瞬间',altEn:'2025 Korea Showdown Invitational'},
+      {src:'assets/images/korea-2025/korea-2025-06.jpg',altZh:'2025年韩国盲人板铃球邀请赛精彩瞬间',altEn:'2025 Korea Showdown Invitational'}
+    ]},
+    {id:'jiangsu',titleZh:'江苏省第十二届残运会精彩瞬间',titleEn:'12th Jiangsu Provincial Para Games',images:[
+      {src:'assets/images/jiangsu-12th/jiangsu-12th-01.jpg',altZh:'江苏省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Jiangsu Provincial Para Games'},
+      {src:'assets/images/jiangsu-12th/jiangsu-12th-02.jpg',altZh:'江苏省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Jiangsu Provincial Para Games'},
+      {src:'assets/images/jiangsu-12th/jiangsu-12th-03.jpg',altZh:'江苏省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Jiangsu Provincial Para Games'},
+      {src:'assets/images/jiangsu-12th/jiangsu-12th-04.jpg',altZh:'江苏省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Jiangsu Provincial Para Games'},
+      {src:'assets/images/jiangsu-12th/jiangsu-12th-05.jpg',altZh:'江苏省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Jiangsu Provincial Para Games'},
+      {src:'assets/images/jiangsu-12th/jiangsu-12th-06.jpg',altZh:'江苏省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Jiangsu Provincial Para Games'}
+    ]},
+    {id:'zhejiang',titleZh:'浙江省第十二届残运会精彩瞬间',titleEn:'12th Zhejiang Provincial Para Games',images:[
+      {src:'assets/images/zhejiang-12th/zhejiang-12th-01.jpg',altZh:'浙江省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Zhejiang Provincial Para Games'},
+      {src:'assets/images/zhejiang-12th/zhejiang-12th-02.jpg',altZh:'浙江省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Zhejiang Provincial Para Games'},
+      {src:'assets/images/zhejiang-12th/zhejiang-12th-03.jpg',altZh:'浙江省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Zhejiang Provincial Para Games'},
+      {src:'assets/images/zhejiang-12th/zhejiang-12th-04.jpg',altZh:'浙江省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Zhejiang Provincial Para Games'},
+      {src:'assets/images/zhejiang-12th/zhejiang-12th-05.jpg',altZh:'浙江省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Zhejiang Provincial Para Games'},
+      {src:'assets/images/zhejiang-12th/zhejiang-12th-06.jpg',altZh:'浙江省第十二届残运会盲人板铃球比赛现场',altEn:'Showdown competition at the 12th Zhejiang Provincial Para Games'}
+    ]},
+    {id:'shanghai',titleZh:'上海市盲人板铃球团体赛精彩瞬间',titleEn:'Shanghai Showdown Team Tournament',images:[
+      {src:'assets/images/shanghai-team/shanghai-team-01.jpg',altZh:'上海市盲人板铃球团体赛比赛现场',altEn:'Shanghai Showdown Team Tournament'},
+      {src:'assets/images/shanghai-team/shanghai-team-02.jpg',altZh:'上海市盲人板铃球团体赛比赛现场',altEn:'Shanghai Showdown Team Tournament'},
+      {src:'assets/images/shanghai-team/shanghai-team-03.jpg',altZh:'上海市盲人板铃球团体赛比赛现场',altEn:'Shanghai Showdown Team Tournament'},
+      {src:'assets/images/shanghai-team/shanghai-team-04.jpg',altZh:'上海市盲人板铃球团体赛比赛现场',altEn:'Shanghai Showdown Team Tournament'},
+      {src:'assets/images/shanghai-team/shanghai-team-05.jpg',altZh:'上海市盲人板铃球团体赛比赛现场',altEn:'Shanghai Showdown Team Tournament'},
+      {src:'assets/images/shanghai-team/shanghai-team-06.jpg',altZh:'上海市盲人板铃球团体赛比赛现场',altEn:'Shanghai Showdown Team Tournament'}
+    ]},
+    {id:'national',titleZh:'往届全国盲人板铃球交流赛精彩瞬间',titleEn:'National Showdown Exchange Tournaments',images:[
+      {src:'assets/images/national-exchange/national-exchange-01.jpg',altZh:'全国盲人板铃球交流赛比赛现场',altEn:'National Showdown Exchange Tournament'},
+      {src:'assets/images/national-exchange/national-exchange-02.jpg',altZh:'全国盲人板铃球交流赛比赛现场',altEn:'National Showdown Exchange Tournament'},
+      {src:'assets/images/national-exchange/national-exchange-03.jpg',altZh:'全国盲人板铃球交流赛比赛现场',altEn:'National Showdown Exchange Tournament'},
+      {src:'assets/images/national-exchange/national-exchange-04.jpg',altZh:'全国盲人板铃球交流赛比赛现场',altEn:'National Showdown Exchange Tournament'},
+      {src:'assets/images/national-exchange/national-exchange-05.jpg',altZh:'全国盲人板铃球交流赛比赛现场',altEn:'National Showdown Exchange Tournament'},
+      {src:'assets/images/national-exchange/national-exchange-06.jpg',altZh:'全国盲人板铃球交流赛比赛现场',altEn:'National Showdown Exchange Tournament'}
+    ]}
+  ],
+  road: [
+    {phase:'01',zh:'国际赛场首秀',en:'International Debut',dzh:'2025年11月，中国6名运动员首次参加国际板铃球赛事，全部完成比赛。在男子单打项目中（共31名运动员），张皓韦获得第15名、闫浩然获得第21名、王家宝获得第24名、钱俊获得第26名；在女子单打项目中（共15名运动员），赵馨获得第8名、薛艳红获得第12名。',den:'In November 2025, six Chinese athletes completed China’s first international Showdown competition. In the 31-player men’s singles event, Zhang Haowei placed 15th, Yan Haoran 21st, Wang Jiabao 24th and Qian Jun 26th. In the 15-player women’s singles event, Zhao Xin placed 8th and Xue Yanhong 12th.'},
+    {phase:'02',zh:'经验转化',en:'Turning Experience Into Progress',dzh:'队伍通过实战认识到技战术、专业装备和规则理解上的差距，并开展国际技术交流。备战期间，中国运动员委托杭州帕乐盲人体育俱乐部从欧洲购置专业球拍，并与教练员团队积极研究国外高水平运动员的技战术。',den:'Competition revealed priorities in tactics, professional equipment and rule knowledge while opening international technical exchange. During preparations, the athletes commissioned Hangzhou Palestra Sports Club for the Blind to source professional paddles from Europe and worked with the coaching team to study the tactics of leading international players.'},
+    {phase:'03',zh:'集结亚洲锦标赛',en:'Asian Championship Campaign',dzh:'2026年IBSA盲人板铃球亚洲锦标赛将于8月12日至17日在韩国首尔举行。此次参赛经中国残联体育部批准同意，由南京市盲人学校组织4名运动员参赛。',den:'The 2026 IBSA Asian Showdown Championships will take place in Seoul, Korea, from 12 to 17 August. With the approval of the Sports Department of the China Disabled Persons’ Federation, Nanjing School for the Blind will organize four athletes to compete.'},
+    {phase:'04',zh:'正式比赛',en:'Championship Days',dzh:'8月13日进行运动员分级与赛前训练，8月14日至16日进行开幕式、正式比赛及闭幕式。',den:'Classification and pre-event training take place on 13 August, followed by competition from 14 to 16 August.'}
+  ],
+  athletes: [
+    {number:'01',nameZh:'张皓韦',nameEn:'',birthDate:'2007-06-05',image:'assets/images/athletes/zhang-haowei.jpg',eventZh:'男子单打 · 历届参赛记录',eventEn:'Men’s Singles · Historical Record',rankingZh:'盲人板铃球世界排行榜 · 男单第50名',rankingEn:'Showdown World Ranking · Men’s Singles No. 50',bioZh:'2025年随中国队首次参加国际板铃球赛事。',bioEn:'Part of China’s first international Showdown delegation in 2025.',achievementZh:'2025韩国国际公开赛第15名（31人）；2026江苏省残运会男子单打冠军。',achievementEn:'15th of 31 at the 2025 Korea International Open; men’s singles champion at the 2026 Jiangsu Provincial Para Games.'},
+    {number:'02',nameZh:'闫浩然',nameEn:'',birthDate:'2004-08-02',image:'assets/images/athletes/yan-haoran.jpg',eventZh:'男子单打 · 历届参赛记录',eventEn:'Men’s Singles · Historical Record',rankingZh:'盲人板铃球世界排行榜 · 男单第67名',rankingEn:'Showdown World Ranking · Men’s Singles No. 67',bioZh:'从全国交流赛、省级赛事走向国际赛场的中国运动员。',bioEn:'A Chinese athlete whose record spans national exchanges, provincial events and international competition.',achievementZh:'2019全国交流赛季军；2020江苏友谊赛冠军；2023全国学生组冠军；2025韩国国际公开赛第21名；2026江苏省残运会亚军。',achievementEn:'National exchange bronze (2019); Jiangsu Friendship Tournament champion (2020); national student champion (2023); 21st at the 2025 Korea International Open; Jiangsu provincial silver (2026).'},
+    {number:'03',nameZh:'赵馨',nameEn:'',birthDate:'2007-03-31',image:'assets/images/athletes/zhao-xin.jpg',eventZh:'女子单打 · 历届参赛记录',eventEn:'Women’s Singles · Historical Record',rankingZh:'盲人板铃球世界排行榜 · 女单第41名',rankingEn:'Showdown World Ranking · Women’s Singles No. 41',bioZh:'2025年中国首次国际参赛阵容中的女子运动员。',bioEn:'A women’s singles athlete in China’s first international delegation in 2025.',achievementZh:'2023全国学生组季军；2025韩国国际公开赛第8名（15人）；2026江苏省残运会女子单打冠军。',achievementEn:'National student bronze (2023); 8th of 15 at the 2025 Korea International Open; women’s singles champion at the 2026 Jiangsu Provincial Para Games.'},
+    {number:'04',nameZh:'宋海莹',nameEn:'',birthDate:'2004-05-27',image:'assets/images/athletes/song-haiying.jpg',eventZh:'女子单打 · 历届参赛记录',eventEn:'Women’s Singles · Historical Record',rankingZh:'盲人板铃球世界排行榜 · 女单第80名',rankingEn:'Showdown World Ranking · Women’s Singles No. 80',bioZh:'在学生组赛事和省级残运会中留下明确成绩记录。',bioEn:'A recorded competitor across student competition and provincial Para Games.',achievementZh:'2023全国学生组女子单打冠军；2026江苏省残运会女子单打亚军。',achievementEn:'National student women’s singles champion (2023); Jiangsu provincial women’s singles silver (2026).'}
+  ],
+  staff: [
+    {roleZh:'教练员',roleEn:'Coach',name:'郝达雯',image:'assets/images/staff/hao-dawen.jpg',bioZh:'郝达雯是南京市盲人学校体育教研组长、盲人板铃球项目总教练，深耕视障体育教学多年，秉持“盲孩子的世界，声音就是光”的教学理念，独创听觉定位强化训练法，针对性训练视障学生听音辨位能力。\n\n她坚持沉浸式教学，日常蒙眼模拟视障视角打磨教学动作，手把手指导学生掌握板铃球握拍、攻防技巧；带领南京盲校队伍征战全国盲人板铃球交流赛，斩获全部六项冠军，创下赛事全项目大满贯纪录。2025年参与韩国盲人板铃球邀请赛，带领队伍获得优异成绩；同时统筹队伍备战亚洲盲人板铃球锦标赛，兼顾赛前分层训练、赛中心态疏导与赛后复盘总结，是国内青少年盲人板铃球普及与竞技人才培养的核心骨干。',bioEn:'Hao Dawen is Head of Physical Education at Nanjing School for the Blind and head coach of its Showdown program. She has developed auditory-positioning training methods for visually impaired students and leads the team’s technical and competition preparation.'},
+    {roleZh:'领队',roleEn:'Team Leader',name:'卢恩杰',image:'assets/images/staff/lu-enjie.jpg',bioZh:'卢恩杰任职于南京市盲人学校，是盲人板铃球、盲人门球双项目专职教练员，与郝达雯教练搭档共同负责校板铃球代表队日常集训。\n\n为贴近视障运动员的运动感受，他时常全程佩戴眼罩亲身完成发球、防守、对战全套训练，以此优化训练方案、感知学生训练难点，共情式的教学方式深受队员认可；在全国盲人板铃球赛事备战周期，负责辅助打磨队员攻防节奏、基础动作纠错，配合总教练完善梯队训练计划，陪伴一批又一批视障学生站上全国板铃球赛事领奖台，助力视障青少年通过板铃球运动建立自信、收获成长。',bioEn:'Lu Enjie works at Nanjing School for the Blind as a full-time coach for both Showdown and goalball. Alongside Hao Dawen, he supports daily training, technical refinement and athlete development for the school team.'},
+    {roleZh:'特邀顾问',roleEn:'Special Advisor',name:'郝国华',image:'assets/images/staff/hao-guohua.jpg',bioZh:'郝国华为国家体育总局篮球运动管理中心退休干部。在职期间，曾任中国篮球协会副秘书长、中国男子篮球职业联赛办公室主任、国家男子篮球队领队等职务。\n\n他是我国最早从事盲人门球竞赛工作的技术官员之一，也是我国第一批盲人门球国际级裁判员，曾任亚洲盲人门球技术委员会主任，现任中国盲人门球裁判委员会主任，并曾担任2023年杭州亚残运会竞赛副指挥长。\n\n他曾担任2008年北京残奥会开幕式国际技术官员代表宣誓人、2022年北京冬残奥会开幕式国际残奥委会会旗护旗手及2023年杭州亚残运会火炬手。作为国内残疾人体育竞赛专家，他深度参与盲人门球、盲人板铃球全国赛事组织工作。早在国内板铃球项目起步阶段，他便在全国教练员、裁判员培训班讲授赛事组织、裁判管理及竞赛规则体系，并多次担任省级、全国盲人板铃球交流赛特邀技术代表、裁判长。深耕残疾人体育三十余年，他持续推动国内视障球类赛事竞赛标准规范化，长期为全国盲人球类赛事提供专业技术指导与行业建议。',bioEn:'Hao Guohua is a retired official of the Basketball Management Center of the General Administration of Sport of China. During his career, he served as Deputy Secretary-General of the Chinese Basketball Association, Director of the Chinese Basketball Association League Office, and team manager of the China men’s national basketball team.\n\nHe was among China’s earliest technical officials involved in goalball competition and one of the country’s first international-level goalball referees. He previously chaired the Asian Goalball Technical Committee, currently chairs the China Goalball Referees Committee, and served as Deputy Competition Commander for the Hangzhou 2022 Asian Para Games, held in 2023.\n\nHao took the oath on behalf of international technical officials at the opening ceremony of the Beijing 2008 Paralympic Games, carried the International Paralympic Committee flag at the opening ceremony of the Beijing 2022 Paralympic Winter Games, and served as a torchbearer for the Hangzhou Asian Para Games in 2023. An expert in disability-sport competition, he has been deeply involved in organizing national goalball and Showdown events. Since the early development of Showdown in China, he has taught event organization, officiating management, and competition rules at national training programs for coaches and referees, and has repeatedly served as an invited technical delegate and chief referee at provincial and national Showdown exchange tournaments. With more than 30 years in disability sport, he continues to advance competition standards and provide technical guidance for blind ball sports across China.'},
+    {roleZh:'工作人员',roleEn:'Staff',name:'涂晓堃',image:'assets/images/staff/tu-xiaokun.jpg',bioZh:'涂晓堃为杭州帕乐盲人体育俱乐部主任，曾任国际盲人体育联合会亚洲委员会主席，现任国际盲体联盲人门球委员会委员兼亚洲区代表，是将盲人板铃球项目从欧洲带回中国并推动其在国内发展的关键人物。\n\n他多次担任全国盲人门球、盲人板铃球锦标赛及省级残运会裁判长，负责赛场踏勘、器材校验和裁判团队统筹等工作；常年在全国各地开展裁判培训与项目普及活动，搭建国内盲人板铃球赛事、教学、推广一体化体系，并持续联动各地残联、盲协和盲校，推动这项视障人士专属运动在全国普及。',bioEn:'Tu Xiaokun is Director of the Hangzhou Palestra Sports Club for the Blind. He previously served as Chair of the Asian Committee of the International Blind Sports Federation and currently serves as a member of the IBSA Goalball Committee and its representative for Asia. He played a key role in introducing Showdown from Europe to China and advancing the sport’s development nationwide.\n\nTu has repeatedly served as chief referee at national goalball and Showdown championships and at provincial Para Games, overseeing venue inspections, equipment checks, and referee-team coordination. He conducts referee training and sport-promotion programs across China, has helped build an integrated system for Showdown competition, teaching, and development, and continues to work with local disabled persons’ federations, associations of the blind, and schools for the blind to expand access to the sport.'},
+    {roleZh:'工作人员',roleEn:'Staff',name:'黄静静',image:'assets/images/staff/huang-jingjing.jpg',bioZh:'黄静静，杭州帕乐盲人体育俱乐部秘书长，盲人门球国际级裁判、盲人板铃球 IBSA（国际盲人体育联合会）认证裁判、浙江省残疾人体育健身指导员，盲人板铃球国家级讲师与裁判，长期致力于推动视障群体体育事业发展与社会融合实践。\n\n作为帕乐盲人体育俱乐部的重要管理成员，她参与俱乐部日常运营、公益活动组织以及盲人体育项目推广工作，积极推动适合视障人士参与的体育项目在社会范围内开展。杭州帕乐盲人体育俱乐部成立于2018年，是以促进盲人体育发展和残健共融为目标的非营利公益组织，主要开展盲人体育项目引进、研发、推广以及相关赛事和交流活动。',bioEn:'Huang Jingjing is Secretary-General of the Hangzhou Palestra Sports Club for the Blind, an international goalball referee, IBSA-certified Showdown referee, provincial disability-sport fitness instructor, and national Showdown lecturer and referee. She supports club operations, public-interest activities, and sport promotion for people with visual impairments.'}
+  ],
+  events: {
+    schedule:{zh:'赛程',en:'Schedule',statusZh:'2026年8月12日—17日',statusEn:'12–17 August 2026',metaZh:'韩国首尔奥林匹克公园酒店',metaEn:'Olympic Park Hotel, Seoul, Korea',venueImage:'assets/images/olympic-park-hotel-seoul.jpg',venueAltZh:'韩国首尔奥林匹克公园酒店外观',venueAltEn:'Exterior of Olympic Park Hotel in Seoul, Korea',badgeZh:'赛事日期已确认',badgeEn:'EVENT DATES CONFIRMED',items:[{dateZh:'8月12日',dateEn:'12 AUG',textZh:'技术官员、运动队报到',textEn:'Officials and teams arrive'},{dateZh:'8月13日',dateEn:'13 AUG',textZh:'运动员分级、赛前训练',textEn:'Athlete classification and pre-event training'},{dateZh:'8月14—16日',dateEn:'14–16 AUG',textZh:'开幕式、正式比赛、闭幕式',textEn:'Opening ceremony, competition and closing ceremony'},{dateZh:'8月17日',dateEn:'17 AUG',textZh:'离会',textEn:'Departure'}]},
+    results:{zh:'赛果',en:'Results',statusZh:'官方成绩待公布',statusEn:'Official results coming soon.',metaZh:'比赛结束后更新',metaEn:'Updates will follow each match'},
+    live:{zh:'直播',en:'Live',statusZh:'官方直播信息待公布',statusEn:'Official live information coming soon.',metaZh:'不提供未经确认的直播链接',metaEn:'No unverified streaming links will be listed'},
+    news:{zh:'资讯',en:'News',statusZh:'从国际首秀走向亚洲锦标赛',statusEn:'From International Debut To The Asian Championships',metaZh:'2025年，中国6名运动员在韩国完成中国板铃球首次国际参赛。',metaEn:'In 2025, six Chinese athletes completed China’s first international Showdown competition.'}
+  },
+  sport:[
+    {icon:'01',zh:'比赛方式',en:'How It Works',dzh:'运动员通过击球、拦截、防守和进攻完成室内一对一对抗。',den:'Athletes combine striking, interception, defense and attack in an indoor head-to-head contest.'},
+    {icon:'02',zh:'球桌',en:'The Table',dzh:'比赛在特制球桌上进行，器材和场地紧凑，适合室内训练与竞赛。',den:'Competition takes place on a specialized, compact table suited to indoor training and events.'},
+    {icon:'03',zh:'球拍与带铃球',en:'Paddle & Audible Ball',dzh:'运动员使用球拍控制攻防；球体内置响铃持续提供声音线索。',den:'Athletes use paddles to control play while a bell inside the ball provides continuous sound cues.'},
+    {icon:'04',zh:'声音定位',en:'Sound Location',dzh:'运动员主要依靠声音判断球的位置、方向和速度。',den:'Athletes primarily use sound to judge the ball’s position, direction and speed.'}
+  ],
+  story:[
+    {year:'2016',zh:'亚洲首个发展中心',en:'Asia’s First Development Center',dzh:'大连盲聋学校开展系统教学实践，并于年底获批成为亚洲第一个IBSA盲人板铃球发展中心。',den:'Dalian School for the Blind and Deaf established structured teaching and became Asia’s first IBSA Showdown Development Center.'},
+    {year:'2017',zh:'走向全国推广',en:'National Promotion Begins',dzh:'项目进入中国残疾人康复体育、健身体育推广视野，首届全国推介研讨会暨培训班在昆明举办。',den:'Showdown entered national rehabilitation and fitness sport promotion, supported by the first national seminar and training program in Kunming.'},
+    {year:'2019',zh:'首届全国交流赛',en:'First National Exchange',dzh:'首届全国盲人板铃球交流赛在大连举行，来自全国21个省区市的110人参赛。',den:'The first National Showdown Exchange Tournament in Dalian welcomed 110 participants from 21 provincial-level regions.'},
+    {year:'2022',zh:'进入省级残运会',en:'Provincial Para Games',dzh:'江苏省第十一届残疾人运动会首次将盲人板铃球纳入比赛项目。',den:'The 11th Jiangsu Provincial Para Games included Showdown as an official competition for the first time.'},
+    {year:'2023',zh:'专业培训与中外交流',en:'Professional & International Exchange',dzh:'杭州帕乐盲人体育俱乐部受邀在上海开展一级裁判员培训，并组织首次中外盲人板铃球裁判员合训，推动专业人才与国际交流。',den:'杭州帕乐盲人体育俱乐部 delivered referee training in Shanghai and organized the first joint training for Chinese and international Showdown referees.'},
+    {year:'2025',zh:'首次国际参赛',en:'International Debut',dzh:'由杭州帕乐盲人体育俱乐部组织代表团，6名中国运动员赴韩国参赛，在7国46名运动员参加的赛事中全部完赛。',den:'A delegation organized by 杭州帕乐盲人体育俱乐部 took six Chinese athletes to Korea, where all completed the 46-athlete, seven-nation event.'},
+    {year:'2026',zh:'迈向亚洲锦标赛',en:'Asian Championship Journey',dzh:'中国队筹备参加在韩国首尔举行的IBSA盲人板铃球亚洲锦标赛。',den:'Team China prepares for the IBSA Asian Showdown Championships in Seoul, Korea.'}
+  ],
+  stats:[{value:'50',zh:'支全国各地省市区级俱乐部代表队',en:'Provincial, Municipal and District Club Teams Nationwide'},{value:'3',zh:'次全国盲人板铃球交流赛',en:'National Showdown Exchange Tournaments'},{value:'6',zh:'首次国际赛事完赛运动员',en:'Athletes In China’s International Debut'},{value:'2016',zh:'亚洲首个IBSA发展中心获批',en:'Asia’s First IBSA Development Center'}],
+  support:[{zh:'国际赛事参赛',en:'International Competition'},{zh:'运动员发展',en:'Athlete Development'},{zh:'训练与竞赛装备',en:'Equipment'},{zh:'媒体内容制作',en:'Media Production'},{zh:'包容性体育发展',en:'Inclusive Sports Development'}],
+  media:[{typeZh:'里程碑',typeEn:'Milestone',titleZh:'中国板铃球完成国际赛场首秀',titleEn:'China Completes Its International Showdown Debut'},{typeZh:'赛事',typeEn:'Event',titleZh:'2026亚洲锦标赛：8月相约首尔',titleEn:'2026 Asian Championships: Seoul In August'},{typeZh:'项目故事',typeEn:'The Sport',titleZh:'从声音定位到快速攻防',titleEn:'From Sound Location To Fast Competition'}],
+  contacts:[{labelZh:'联系机构',labelEn:'Organization',value:'杭州帕乐盲人体育俱乐部',valueEn:'Hangzhou Para Blind Sports Club',href:''},{labelZh:'邮箱',labelEn:'Email',value:'jennyhuang.sport@aliyun.com',href:'mailto:jennyhuang.sport@aliyun.com'},{labelZh:'公众号',labelEn:'WeChat Official Account',image:'assets/images/contact/palestra-wechat-qr.jpeg',altZh:'杭州帕乐盲人体育俱乐部公众号二维码',altEn:'Hangzhou Para Blind Sports Club WeChat QR code'}]
+};
+
+// Hero support line. Keep this copy here so it remains editable with other site content.
+window.SITE_CONTENT.translations.zh.debutLine = '中国队首次正式参加IBSA官方盲人板铃球赛事';
+window.SITE_CONTENT.translations.en.debutLine = "Team China's First Official IBSA Showdown Event";
+window.SITE_CONTENT.translations.zh.heroLine = '听见比赛，<br>感受力量。';
+window.SITE_CONTENT.translations.zh.missionLabel = '盲人板铃球项目介绍';
+window.SITE_CONTENT.translations.en.missionLabel = 'About Showdown';
+window.SITE_CONTENT.translations.zh.missionCopy = '盲人板铃球是一项专为视力障碍人士设计的室内对抗性球类运动。运动员依靠球体内置响铃判断位置、方向和速度，在快速攻防中展现专注、判断与竞技力量。';
+window.SITE_CONTENT.translations.en.missionCopy = 'Showdown is an indoor competitive ball sport designed for people with visual impairments. Athletes locate the audible ball by its sound, reading position, direction and speed through every fast exchange.';
+window.SITE_CONTENT.translations.zh.missionVideoLabel = '盲人板铃球宣传视频';
+window.SITE_CONTENT.translations.en.missionVideoLabel = 'Showdown Introduction Video';
+window.SITE_CONTENT.translations.zh.missionVideoStatus = '时长 1:00';
+window.SITE_CONTENT.translations.en.missionVideoStatus = 'Duration 1:00';
+window.SITE_CONTENT.translations.zh.storyIntro = '从学校教学试点到全国交流、省级赛事和国际赛场，中国盲人板铃球正形成清晰的发展路径。杭州帕乐盲人体育俱乐部持续参与专业培训、赛事协作与国际交流，是项目发展的重要推动力量。';
+window.SITE_CONTENT.translations.en.storyIntro = 'From school-based pilots to national exchanges, provincial games and international competition, Showdown in China has built a clear development pathway. 杭州帕乐盲人体育俱乐部 has been an important driver through professional training, event collaboration and international exchange.';
+window.SITE_CONTENT.translations.zh.personalIntro = '个人介绍';
+window.SITE_CONTENT.translations.en.personalIntro = 'View Profile';
+window.SITE_CONTENT.translations.zh.staffProfile = '团队成员介绍';
+window.SITE_CONTENT.translations.en.staffProfile = 'Team Member Profile';
+window.SITE_CONTENT.translations.zh.galleryLabel = '历届赛事影像';
+window.SITE_CONTENT.translations.en.galleryLabel = 'Competition Gallery';
+window.SITE_CONTENT.translations.zh.galleryTitle = '比赛精彩瞬间';
+window.SITE_CONTENT.translations.en.galleryTitle = 'COMPETITION MOMENTS';
+window.SITE_CONTENT.translations.zh.galleryIntro = '按赛事浏览盲人板铃球赛场影像，更多照片将随资料整理持续更新。';
+window.SITE_CONTENT.translations.en.galleryIntro = 'Explore Showdown competition images by event. More photographs will be added as the archive is prepared.';
+window.SITE_CONTENT.translations.zh.galleryMore = '点击查看更多比赛精彩瞬间';
+window.SITE_CONTENT.translations.en.galleryMore = 'View More Competition Moments';
+window.SITE_CONTENT.translations.zh.galleryModalLabel = '历届比赛精彩瞬间';
+window.SITE_CONTENT.translations.en.galleryModalLabel = 'Competition Moments Archive';
+window.SITE_CONTENT.translations.zh.galleryPlaceholder = '照片待添加';
+window.SITE_CONTENT.translations.en.galleryPlaceholder = 'Photo Coming Soon';
+window.SITE_CONTENT.translations.zh.roadTitle = 'ROAD TO ASIA';
+window.SITE_CONTENT.translations.en.roadTitle = 'ROAD TO ASIA';
+window.SITE_CONTENT.translations.zh.roadIntro = '2025年，中国运动员首次登上板铃球国际赛场。2026年，队伍将向亚洲最高级别官方洲际锦标赛迈进。此次亚洲锦标赛设男子单打、女子单打和团体赛三个比赛类别。目前已知参赛国有中国、韩国、马来西亚和哈萨克斯坦，最终参赛名单待公布。';
+window.SITE_CONTENT.translations.en.roadIntro = 'In 2025, Chinese athletes entered the international Showdown arena for the first time. In 2026, the team advances toward Asia’s highest-level official continental championship, featuring men’s singles, women’s singles and team competition. Countries currently known to be participating include China, Korea, Malaysia and Kazakhstan; the final entry list is yet to be announced.';
+window.SITE_CONTENT.translations.zh.teamLabel = '中国代表队介绍';
+window.SITE_CONTENT.translations.en.teamLabel = 'Team China Delegation';
+window.SITE_CONTENT.translations.zh.teamIntro = '2026 IBSA盲人板铃球亚洲锦标赛中国代表队正式名单';
+window.SITE_CONTENT.translations.en.teamIntro = 'Official Team China roster for the 2026 IBSA Asian Showdown Championships';
+window.SITE_CONTENT.translations.zh.modalCopy = '运动员世界排名与历届参赛成绩。';
+window.SITE_CONTENT.translations.en.modalCopy = 'Athlete world ranking and previous competition results.';
+window.SITE_CONTENT.translations.zh.dataNote = '运动员世界排名与历届成绩来自现有参赛材料；赛事对阵及赛果以官方发布为准。';
+window.SITE_CONTENT.translations.en.dataNote = 'Athlete world rankings and previous results are drawn from current competition records. Draws and results remain subject to official release.';
+window.SITE_CONTENT.translations.zh.footerNote = '赛事对阵及赛果以官方发布为准';
+window.SITE_CONTENT.translations.en.footerNote = 'Draws and results remain subject to official release';
+window.SITE_CONTENT.translations.zh.roadGalleryMore = '点击查看2025年韩国盲人板铃球邀请赛精彩瞬间';
+window.SITE_CONTENT.translations.en.roadGalleryMore = 'View Moments From The 2025 Korea Showdown Invitational';
+window.SITE_CONTENT.translations.zh.venueImagePending = '酒店图片待添加';
+window.SITE_CONTENT.translations.en.venueImagePending = 'Venue Image Coming Soon';
+window.SITE_CONTENT.translations.zh.storyLabel = '中国盲人板铃球发展';
+window.SITE_CONTENT.translations.en.storyLabel = 'Showdown Development In China';
+window.SITE_CONTENT.translations.zh.storyImagePending = '发展历程图片待添加';
+window.SITE_CONTENT.translations.en.storyImagePending = 'Archive Image Coming Soon';
+window.SITE_CONTENT.translations.zh.liveVideoLabel = '盲人板铃球现场比赛视频';
+window.SITE_CONTENT.translations.en.liveVideoLabel = 'Showdown Live Match Video';
+window.SITE_CONTENT.translations.zh.liveVideoStatus = '时长 1:33';
+window.SITE_CONTENT.translations.en.liveVideoStatus = 'Duration 1:33';
+window.SITE_CONTENT.translations.zh.partnerLabel = '赞助商合作';
+window.SITE_CONTENT.translations.en.partnerLabel = 'Sponsor Cooperation';
+window.SITE_CONTENT.translations.zh.partnerTitle = 'SPONSOR<br>COOPERATION';
+window.SITE_CONTENT.translations.en.partnerTitle = 'SPONSOR<br>COOPERATION';
+window.SITE_CONTENT.translations.zh.partnerUs = '成为赞助商';
+window.SITE_CONTENT.translations.zh.partnerCopy = '与中国盲人板铃球队并肩，把国际竞技、运动员成长与包容性体育带给更广泛的受众。';
+window.SITE_CONTENT.translations.en.partnerCopy = 'Stand with China Blind Showdown Team and help bring international competition, athlete development and inclusive sport to a wider audience.';
+window.SITE_CONTENT.translations.en.storyIntro = 'From school-based pilots to national exchanges, provincial games and international competition, Showdown in China has built a clear development pathway. Hangzhou Para Blind Sports Club has been an important driver through professional training, event collaboration and international exchange.';
+window.SITE_CONTENT.road.forEach(item => { item.den = item.den.replaceAll('Hangzhou Palestra Sports Club for the Blind', 'Hangzhou Para Blind Sports Club').replaceAll('杭州帕乐盲人体育俱乐部', 'Hangzhou Para Blind Sports Club'); });
+window.SITE_CONTENT.story.forEach(item => { item.den = item.den.replaceAll('杭州帕乐盲人体育俱乐部', 'Hangzhou Para Blind Sports Club'); });
+window.SITE_CONTENT.staff.forEach(member => { member.bioEn = member.bioEn.replaceAll('Hangzhou Palestra Sports Club for the Blind', 'Hangzhou Para Blind Sports Club').replaceAll('杭州帕乐盲人体育俱乐部', 'Hangzhou Para Blind Sports Club'); });
+Object.assign(window.SITE_CONTENT.athletes[0], {nameEn:'Zhang Haowei'});
+Object.assign(window.SITE_CONTENT.athletes[1], {nameEn:'Yan Haoran'});
+Object.assign(window.SITE_CONTENT.athletes[2], {nameEn:'Zhao Xin'});
+Object.assign(window.SITE_CONTENT.athletes[3], {nameEn:'Song Haiying'});
+Object.assign(window.SITE_CONTENT.staff[0], {nameEn:'Hao Dawen'});
+Object.assign(window.SITE_CONTENT.staff[1], {nameEn:'Lu Enjie'});
+Object.assign(window.SITE_CONTENT.staff[2], {nameEn:'Hao Guohua'});
+Object.assign(window.SITE_CONTENT.staff[3], {nameEn:'Tu Xiaokun'});
+Object.assign(window.SITE_CONTENT.staff[4], {nameEn:'Huang Jingjing'});
