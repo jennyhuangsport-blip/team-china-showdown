@@ -65,7 +65,7 @@
     lang = next;
     localStorage.setItem('showdown-language', lang);
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-    document.title = lang === 'zh' ? '中国板铃球代表队｜2026亚洲板铃球锦标赛' : 'TEAM CHINA SHOWDOWN | 2026 Asian Championships';
+    document.title = lang === 'zh' ? '中国队-2026IBSA亚洲盲人板铃球锦标赛' : 'TEAM CHINA SHOWDOWN | 2026 Asian Championships';
     document.querySelectorAll('[data-i18n]').forEach(node => { const v=C.translations[lang][node.dataset.i18n]; if(v) node.textContent=v; });
     document.querySelectorAll('[data-i18n-html]').forEach(node => { const v=C.translations[lang][node.dataset.i18nHtml]; if(v) node.innerHTML=v; });
     document.querySelectorAll('[data-alt-zh]').forEach(node => node.setAttribute('aria-label',lang==='zh'?node.dataset.altZh:node.dataset.altEn));
