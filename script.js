@@ -2,6 +2,7 @@
   const C = window.SITE_CONTENT;
   let lang = localStorage.getItem('showdown-language') === 'en' ? 'en' : 'zh';
   let activeTab = 'schedule';
+  let activeScheduleDay = 0;
   let lastStoryTrigger = null;
   let lastStaffTrigger = null;
   let lastGalleryTrigger = null;
@@ -56,9 +57,24 @@
   function renderEvent(){
     const x=C.events[activeTab];
     const items = x.items ? `<div class="event-schedule">${x.items.map(item => `<div class="event-schedule-row"><strong>${lang==='zh'?item.dateZh:item.dateEn}</strong><span>${lang==='zh'?item.textZh:item.textEn}</span></div>`).join('')}</div>` : '';
+    const schedule = activeTab === 'schedule' && x.scheduleDays ? renderMatchSchedule(x.scheduleDays) : '';
     const venue = activeTab==='schedule' ? (x.venueImage ? `<img class="event-venue-image" src="${x.venueImage}" alt="${lang==='zh'?x.venueAltZh:x.venueAltEn}">` : `<div class="event-venue-placeholder" role="img" aria-label="${C.translations[lang].venueImagePending}"><span>${C.translations[lang].venueImagePending}</span></div>`) : '';
     const badge = lang==='zh' ? (x.badgeZh || '待官方公布') : (x.badgeEn || 'OFFICIAL INFORMATION COMING SOON');
-    el('event-panel').innerHTML=`<span class="panel-type">${pick(x)}</span><h3>${lang==='zh'?x.statusZh:x.statusEn}</h3><p>${lang==='zh'?x.metaZh:x.metaEn}</p>${venue}${items}<span class="tba">${badge}</span>`;
+    el('event-panel').innerHTML=`<span class="panel-type">${pick(x)}</span><h3>${lang==='zh'?x.statusZh:x.statusEn}</h3><p>${lang==='zh'?x.metaZh:x.metaEn}</p>${venue}${items}${schedule}<span class="tba">${badge}</span>`;
+    el('event-panel').querySelectorAll('[data-schedule-day]').forEach(button => button.addEventListener('click', () => { activeScheduleDay=Number(button.dataset.scheduleDay); renderEvent(); }));
+  }
+
+  function englishMatchText(value) {
+    const translations = {'男子A组':'Men\'s Group A','男子B组':'Men\'s Group B','女子A组':'Women\'s Group A','混合团体A组':'Mixed Team Group A','男子1/4决赛1':'Men\'s Quarter-final 1','男子1/4决赛2':'Men\'s Quarter-final 2','男子1/4决赛3':'Men\'s Quarter-final 3','男子1/4决赛4':'Men\'s Quarter-final 4','女子附加赛1':'Women\'s Playoff 1','女子附加赛2':'Women\'s Playoff 2','女子半决赛1':'Women\'s Semi-final 1','女子半决赛2':'Women\'s Semi-final 2','男子半决赛1':'Men\'s Semi-final 1','男子半决赛2':'Men\'s Semi-final 2','男子9-11名排位赛':'Men\'s 9th-11th Place Playoff','男子5-8名排位赛1':'Men\'s 5th-8th Place Playoff 1','男子5-8名排位赛2':'Men\'s 5th-8th Place Playoff 2','女子5-6名排位赛':'Women\'s 5th-6th Place Playoff','男子5-6名排位赛':'Men\'s 5th-6th Place Playoff','男子7-8名排位赛':'Men\'s 7th-8th Place Playoff','女子铜牌赛':'Women\'s Bronze Medal Match','男子铜牌赛':'Men\'s Bronze Medal Match','女子决赛':'Women\'s Final','男子决赛':'Men\'s Final'};
+    const placement = {'A组第1名':'Group A No. 1','A组第2名':'Group A No. 2','A组第3名':'Group A No. 3','A组第4名':'Group A No. 4','A组第5名':'Group A No. 5','A组第6名':'Group A No. 6','B组第1名':'Group B No. 1','B组第2名':'Group B No. 2','B组第3名':'Group B No. 3','B组第4名':'Group B No. 4','B组第5名':'Group B No. 5','B组第6名':'Group B No. 6','女子附加赛1胜者':'Winner of Women\'s Playoff 1','女子附加赛2胜者':'Winner of Women\'s Playoff 2','女子附加赛1负者':'Loser of Women\'s Playoff 1','女子附加赛2负者':'Loser of Women\'s Playoff 2','男子1/4决赛1胜者':'Winner of Men\'s Quarter-final 1','男子1/4决赛2胜者':'Winner of Men\'s Quarter-final 2','男子1/4决赛3胜者':'Winner of Men\'s Quarter-final 3','男子1/4决赛4胜者':'Winner of Men\'s Quarter-final 4','男子1/4决赛1负者':'Loser of Men\'s Quarter-final 1','男子1/4决赛2负者':'Loser of Men\'s Quarter-final 2','男子1/4决赛3负者':'Loser of Men\'s Quarter-final 3','男子1/4决赛4负者':'Loser of Men\'s Quarter-final 4','男子5-8名排位赛1胜者':'Winner of Men\'s 5th-8th Playoff 1','男子5-8名排位赛2胜者':'Winner of Men\'s 5th-8th Playoff 2','男子5-8名排位赛1负者':'Loser of Men\'s 5th-8th Playoff 1','男子5-8名排位赛2负者':'Loser of Men\'s 5th-8th Playoff 2','女子半决赛1胜者':'Winner of Women\'s Semi-final 1','女子半决赛2胜者':'Winner of Women\'s Semi-final 2','女子半决赛1负者':'Loser of Women\'s Semi-final 1','女子半决赛2负者':'Loser of Women\'s Semi-final 2'};
+    return translations[value] || placement[value] || value;
+  }
+
+  function renderMatchSchedule(days) {
+    const day = days[activeScheduleDay] || days[0];
+    const tabs = days.map((item,index) => `<button type="button" class="match-day-button${index===activeScheduleDay?' active':''}" data-schedule-day="${index}" aria-pressed="${index===activeScheduleDay}">${lang==='zh'?item.dateZh:item.dateEn}</button>`).join('');
+    const rows = day.rows.map(([time,phase,court,sideA,sideB,china]) => `<article class="match-row${china?' china-match':''}"><time>${time}</time><div class="match-detail"><span class="match-phase">${lang==='zh'?phase:englishMatchText(phase)}</span><span class="match-players">${lang==='zh'?court:court.replace('Court ','Court ')} · ${lang==='zh'?sideA:englishMatchText(sideA)} <b>vs</b> ${lang==='zh'?sideB:englishMatchText(sideB)}</span></div>${china?`<span class="china-tag">${lang==='zh'?'中国队':'TEAM CHINA'}</span>`:''}</article>`).join('');
+    return `<section class="match-schedule" aria-label="${lang==='zh'?'完整比赛赛程':'Full match schedule'}"><div class="match-schedule-heading"><h4>${lang==='zh'?'完整比赛赛程':'Full Match Schedule'}</h4><p>${lang==='zh'?'红色标识为中国队相关场次':'Matches involving Team China are highlighted in red.'}</p></div><div class="match-day-tabs">${tabs}</div><div class="match-list">${rows}</div></section>`;
   }
 
   function applyLanguage(next) {
