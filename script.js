@@ -57,11 +57,12 @@
   function renderEvent(){
     const x=C.events[activeTab];
     const items = x.items ? `<div class="event-schedule">${x.items.map(item => `<div class="event-schedule-row"><strong>${lang==='zh'?item.dateZh:item.dateEn}</strong><span>${lang==='zh'?item.textZh:item.textEn}</span></div>`).join('')}</div>` : '';
-    const schedule = activeTab === 'schedule' && x.scheduleDays ? renderMatchSchedule(x.scheduleDays) : '';
+    const scheduleButton = activeTab === 'schedule' && x.scheduleDays ? `<button class="button primary schedule-open-button" id="schedule-open" type="button">${C.translations[lang].scheduleOpen}</button>` : '';
     const venue = activeTab==='schedule' ? (x.venueImage ? `<img class="event-venue-image" src="${x.venueImage}" alt="${lang==='zh'?x.venueAltZh:x.venueAltEn}">` : `<div class="event-venue-placeholder" role="img" aria-label="${C.translations[lang].venueImagePending}"><span>${C.translations[lang].venueImagePending}</span></div>`) : '';
     const badge = lang==='zh' ? (x.badgeZh || '待官方公布') : (x.badgeEn || 'OFFICIAL INFORMATION COMING SOON');
-    el('event-panel').innerHTML=`<span class="panel-type">${pick(x)}</span><h3>${lang==='zh'?x.statusZh:x.statusEn}</h3><p>${lang==='zh'?x.metaZh:x.metaEn}</p>${venue}${items}${schedule}<span class="tba">${badge}</span>`;
-    el('event-panel').querySelectorAll('[data-schedule-day]').forEach(button => button.addEventListener('click', () => { activeScheduleDay=Number(button.dataset.scheduleDay); renderEvent(); }));
+    el('event-panel').innerHTML=`<span class="panel-type">${pick(x)}</span><h3>${lang==='zh'?x.statusZh:x.statusEn}</h3><p>${lang==='zh'?x.metaZh:x.metaEn}</p>${venue}${items}${scheduleButton}<span class="tba">${badge}</span>`;
+    const scheduleOpen = el('schedule-open');
+    if (scheduleOpen) scheduleOpen.addEventListener('click', openScheduleModal);
   }
 
   function englishMatchText(value) {
@@ -75,6 +76,14 @@
     const tabs = days.map((item,index) => `<button type="button" class="match-day-button${index===activeScheduleDay?' active':''}" data-schedule-day="${index}" aria-pressed="${index===activeScheduleDay}">${lang==='zh'?item.dateZh:item.dateEn}</button>`).join('');
     const rows = day.rows.map(([time,phase,court,sideA,sideB,china]) => `<article class="match-row${china?' china-match':''}"><time>${time}</time><div class="match-detail"><span class="match-phase">${lang==='zh'?phase:englishMatchText(phase)}</span><span class="match-players">${lang==='zh'?court:court.replace('Court ','Court ')} · ${lang==='zh'?sideA:englishMatchText(sideA)} <b>vs</b> ${lang==='zh'?sideB:englishMatchText(sideB)}</span></div>${china?`<span class="china-tag">${lang==='zh'?'中国队':'TEAM CHINA'}</span>`:''}</article>`).join('');
     return `<section class="match-schedule" aria-label="${lang==='zh'?'完整比赛赛程':'Full match schedule'}"><div class="match-schedule-heading"><h4>${lang==='zh'?'完整比赛赛程':'Full Match Schedule'}</h4><p>${lang==='zh'?'红色标识为中国队相关场次':'Matches involving Team China are highlighted in red.'}</p></div><div class="match-day-tabs">${tabs}</div><div class="match-list">${rows}</div></section>`;
+  }
+
+  function renderScheduleModal() {
+    const x = C.events.schedule;
+    el('schedule-modal-title').textContent = C.translations[lang].scheduleModalTitle;
+    el('schedule-modal-label').textContent = C.translations[lang].scheduleModalLabel;
+    el('schedule-modal-content').innerHTML = renderMatchSchedule(x.scheduleDays);
+    el('schedule-modal-content').querySelectorAll('[data-schedule-day]').forEach(button => button.addEventListener('click', () => { activeScheduleDay=Number(button.dataset.scheduleDay); renderScheduleModal(); }));
   }
 
   function applyLanguage(next) {
@@ -114,6 +123,11 @@
   el('gallery-more').addEventListener('click',openGalleryModal);
   el('road-gallery-more').addEventListener('click',openGalleryModal);
   galleryModal.querySelector('.gallery-modal-close').addEventListener('click',closeGalleryModal);galleryModal.addEventListener('click',e=>{if(e.target===galleryModal)closeGalleryModal();});
+  const scheduleModal=el('schedule-modal');
+  let lastScheduleTrigger=null;
+  function openScheduleModal(event){lastScheduleTrigger=event.currentTarget;renderScheduleModal();scheduleModal.hidden=false;document.body.style.overflow='hidden';scheduleModal.querySelector('.schedule-modal-close').focus();}
+  function closeScheduleModal(){if(scheduleModal.hidden)return;scheduleModal.hidden=true;document.body.style.overflow='';if(lastScheduleTrigger)lastScheduleTrigger.focus();}
+  scheduleModal.querySelector('.schedule-modal-close').addEventListener('click',closeScheduleModal);scheduleModal.addEventListener('click',e=>{if(e.target===scheduleModal)closeScheduleModal();});
   const historyModal=el('history-modal');
   let lastHistoryTrigger=null;
   function openHistoryModal(event){lastHistoryTrigger=event.currentTarget;historyModal.hidden=false;document.body.style.overflow='hidden';historyModal.querySelector('.history-modal-close').focus();}
@@ -126,6 +140,6 @@
   function closeSponsorRightsModal(){if(sponsorRightsModal.hidden)return;sponsorRightsModal.hidden=true;document.body.style.overflow='';if(lastSponsorRightsTrigger)lastSponsorRightsTrigger.focus();}
   el('sponsor-rights-open').addEventListener('click',openSponsorRightsModal);
   sponsorRightsModal.querySelector('.sponsor-rights-close').addEventListener('click',closeSponsorRightsModal);sponsorRightsModal.addEventListener('click',e=>{if(e.target===sponsorRightsModal)closeSponsorRightsModal();});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeStaffModal();closeGalleryModal();closeHistoryModal();closeSponsorRightsModal();closeMenu();}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeStaffModal();closeGalleryModal();closeScheduleModal();closeHistoryModal();closeSponsorRightsModal();closeMenu();}});
   applyLanguage(lang);
 })();
