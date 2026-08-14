@@ -9,15 +9,17 @@
   const pick = (obj) => obj[lang === 'zh' ? 'zh' : 'en'];
   const el = (id) => document.getElementById(id);
   const historyCopyZh = document.querySelector('.history-copy').innerHTML;
-  const sponsorProjectsZh = document.querySelector('.sponsor-projects').innerHTML;
+  const sponsorProjectsZh = document.querySelector('.sponsor-projects')?.innerHTML || '';
   const sponsorRightsZh = document.querySelector('.sponsor-rights-list').innerHTML;
 
   function localizeStaticContent() {
     const isZh = lang === 'zh';
     el('story-history-open').textContent = isZh ? '点击查看中国盲人板铃球发展历史' : 'View the History of Showdown in China';
     el('sponsor-rights-open').textContent = isZh ? '点击查看赞助商权益' : 'View Sponsor Benefits';
-    document.querySelector('.sponsor-projects').innerHTML = isZh ? sponsorProjectsZh : '<span>Team China Apparel Sponsorship</span><span>Athlete Equipment Sponsorship</span><span>Bags and Accessories Sponsorship</span><span>Financial Sponsorship</span>';
-    document.querySelector('.sponsor-contact').innerHTML = isZh ? '联系帕乐盲人体育俱乐部秘书处<br><b>jennyhuang.sport@aliyun.com</b>' : 'Contact Hangzhou Para Blind Sports Club Secretariat<br><b>jennyhuang.sport@aliyun.com</b>';
+    const sponsorProjects = document.querySelector('.sponsor-projects');
+    const sponsorContact = document.querySelector('.sponsor-contact');
+    if (sponsorProjects) sponsorProjects.innerHTML = isZh ? sponsorProjectsZh : '<span>Team China Apparel Sponsorship</span><span>Athlete Equipment Sponsorship</span><span>Bags and Accessories Sponsorship</span><span>Financial Sponsorship</span>';
+    if (sponsorContact) sponsorContact.innerHTML = isZh ? '联系帕乐盲人体育俱乐部秘书处<br><b>jennyhuang.sport@aliyun.com</b>' : 'Contact Hangzhou Para Blind Sports Club Secretariat<br><b>jennyhuang.sport@aliyun.com</b>';
     const historyModal = el('history-modal');
     historyModal.querySelector('.eyebrow span:last-child').textContent = isZh ? '项目介绍' : 'Project Introduction';
     el('history-modal-title').textContent = isZh ? '中国盲人板铃球项目介绍' : 'Showdown in China';
@@ -138,7 +140,8 @@
   let lastSponsorRightsTrigger=null;
   function openSponsorRightsModal(event){lastSponsorRightsTrigger=event.currentTarget;sponsorRightsModal.hidden=false;document.body.style.overflow='hidden';sponsorRightsModal.querySelector('.sponsor-rights-close').focus();}
   function closeSponsorRightsModal(){if(sponsorRightsModal.hidden)return;sponsorRightsModal.hidden=true;document.body.style.overflow='';if(lastSponsorRightsTrigger)lastSponsorRightsTrigger.focus();}
-  el('sponsor-rights-open').addEventListener('click',openSponsorRightsModal);
+  const sponsorRightsOpen=el('sponsor-rights-open');
+  if(sponsorRightsOpen)sponsorRightsOpen.addEventListener('click',openSponsorRightsModal);
   sponsorRightsModal.querySelector('.sponsor-rights-close').addEventListener('click',closeSponsorRightsModal);sponsorRightsModal.addEventListener('click',e=>{if(e.target===sponsorRightsModal)closeSponsorRightsModal();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeStaffModal();closeGalleryModal();closeScheduleModal();closeHistoryModal();closeSponsorRightsModal();closeMenu();}});
   applyLanguage(lang);
